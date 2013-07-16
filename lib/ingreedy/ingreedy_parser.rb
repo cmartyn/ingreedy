@@ -41,30 +41,40 @@ class IngreedyParser
     @amount = amount_string.to_f + fraction
     @amount *= @container_amount.to_f if @container_amount
   end
+
   def set_unit_variations(unit, variations)
     variations.each do |abbrev|
       @unit_map[abbrev] = unit
     end
   end
+
   def create_unit_map
     @unit_map = {}
     # english units
     set_unit_variations :cup, ["c.", "c", "cup", "cups"]
     set_unit_variations :fluid_ounce, ["fl. oz.", "fl oz", "fluid ounce", "fluid ounces"]
-    set_unit_variations :gallon, ["gal", "gal.", "gallon", "gallons"]
-    set_unit_variations :ounce, ["oz", "oz.", "ounce", "ounces"]
+    set_unit_variations :gal, ["gal", "gal.", "gallon", "gallons"]
+    set_unit_variations :oz, ["oz", "oz.", "ounce", "ounces"]
     set_unit_variations :pint, ["pt", "pt.", "pint", "pints"]
     set_unit_variations :pound, ["lb", "lb.", "pound", "pounds"]
     set_unit_variations :quart, ["qt", "qt.", "qts", "qts.", "quart", "quarts"]
-    set_unit_variations :tablespoon, ["tbsp.", "tbsp", "tbs.", "tbs", "T", "T.", "tablespoon", "tablespoons", "table spoon", "table spoons"]
-    set_unit_variations :teaspoon, ["tsp.", "tsp", "t", "t.", "teaspoon", "teaspoons"]
+    set_unit_variations :tbs, ["tbsp.", "tbsp", "tbs.", "tbs", "tb", "tb.", "T", "T.", "tablespoon", "tablespoons", "table spoon", "table spoons"]
+    set_unit_variations :tsp, ["t", "t.", "ts", "ts.", "tsp", "tsp.", "teaspoon", "tea spoon", "teaspoons", "tea spoons"]
     # metric units
     set_unit_variations :gram, ["g", "g.", "gr", "gr.", "gram", "grams"]
-    set_unit_variations :kilogram, ["kg", "kg.", "kilogram", "kilograms"]
+    set_unit_variations :kg, ["kg", "kg.", "kilogram", "kilograms"]
     set_unit_variations :liter, ["l", "l.", "liter", "liters"]
-    set_unit_variations :milligram, ["mg", "mg.", "milligram", "milligrams"]
-    set_unit_variations :milliliter, ["ml", "ml.", "milliliter", "milliliters"]
+    set_unit_variations :mg, ["mg", "mg.", "milligram", "milligrams"]
+    set_unit_variations :ml, ["ml", "ml.", "milliliter", "milliliters"]
+    # non-specific units
+    set_unit_variations :dash, ["dash", "a dash"]
+    set_unit_variations :pinch, ["pinch", "a pinch"]
+    set_unit_variations :handful, ["handful", "a handful", "handfulf", "a handfulf"]
+    set_unit_variations :sprig, ["sprig", "a sprig"]
+    set_unit_variations :bunch, ["bunch", "a bunch"]
+    set_unit_variations :stick, ["stick", "a stick"]
   end
+
   def parse_unit
     create_unit_map if @unit_map.nil?
 
