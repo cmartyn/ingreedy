@@ -73,6 +73,7 @@ class IngreedyParser
     set_unit_variations :sprig, ["sprig", "a sprig"]
     set_unit_variations :bunch, ["bunch", "a bunch"]
     set_unit_variations :stick, ["stick", "a stick"]
+    set_unit_variations :clove, ["clove", "cloves"]
   end
 
   def parse_unit
