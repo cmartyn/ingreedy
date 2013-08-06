@@ -1,6 +1,6 @@
 class IngreedyParser
 
-  attr_reader :amount, :unit, :ingredient, :query
+  attr_reader :amount, :unit, :ingredient, :query, :fraction_display
 
   def initialize(query)
     @query = query
@@ -24,11 +24,16 @@ class IngreedyParser
     @container_amount = results[:container_amount]
     @container_unit = results[:container_unit]
 
+    parse_fraction_display results[:amount], results[:fraction]
     parse_amount results[:amount], results[:fraction]
     parse_unit_and_ingredient
   end
 
   private
+
+  def parse_fraction_display(amount_string, fraction_string)
+    @fraction_display = "#{amount_string.to_s} #{fraction_string.to_s}".strip
+  end
 
   def parse_amount(amount_string, fraction_string)
     fraction = 0
@@ -106,6 +111,7 @@ class IngreedyParser
       end
     end
   end
+
   def parse_unit_and_ingredient
     parse_unit
     # clean up ingredient string
