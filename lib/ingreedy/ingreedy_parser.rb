@@ -57,12 +57,12 @@ class IngreedyParser
     @unit_map = {}
     # english units
     set_unit_variations :cup, ["c.", "c", "cup", "cups"]
-    set_unit_variations :fluid_ounce, ["fl. oz.", "fl oz", "fluid ounce", "fluid ounces"]
+    set_unit_variations :fl_oz, ["fl. oz.", "fl oz", "fluid ounce", "fluid ounces"]
     set_unit_variations :gal, ["gal", "gal.", "gallon", "gallons"]
     set_unit_variations :oz, ["oz", "oz.", "ozs", "ozs.", "ounce", "ounces"]
-    set_unit_variations :pint, ["pt", "pt.", "pint", "pints"]
-    set_unit_variations :pound, ["lb", "lb.", "lbs", "lbs.", "pound", "pounds"]
-    set_unit_variations :quart, ["qt", "qt.", "qts", "qts.", "quart", "quarts"]
+    set_unit_variations :pt, ["pt", "pt.", "pint", "pints"]
+    set_unit_variations :lb, ["lb", "lb.", "lbs", "lbs.", "pound", "pounds"]
+    set_unit_variations :qt, ["qt", "qt.", "qts", "qts.", "quart", "quarts"]
     set_unit_variations :tbs, ["tbsp.", "tbsp", "tbs.", "tbs", "tb", "tb.", "T", "T.", "tablespoon", "tablespoons", "table spoon", "table spoons"]
     set_unit_variations :tsp, ["t", "t.", "ts", "ts.", "tsp", "tsp.", "teaspoon", "tea spoon", "teaspoons", "tea spoons"]
     # metric units
@@ -74,7 +74,7 @@ class IngreedyParser
     # non-specific units
     set_unit_variations :dash, ["dash", "a dash"]
     set_unit_variations :pinch, ["pinch", "a pinch"]
-    set_unit_variations :handful, ["handful", "a handful", "handfulf", "a handfulf"]
+    set_unit_variations :handful, ["handful", "a handful"]
     set_unit_variations :sprig, ["sprig", "a sprig"]
     set_unit_variations :bunch, ["bunch", "a bunch"]
     set_unit_variations :stick, ["stick", "a stick"]
