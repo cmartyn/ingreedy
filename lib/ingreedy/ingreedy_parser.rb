@@ -59,9 +59,9 @@ class IngreedyParser
     set_unit_variations :cup, ["c.", "c", "cup", "cups"]
     set_unit_variations :fluid_ounce, ["fl. oz.", "fl oz", "fluid ounce", "fluid ounces"]
     set_unit_variations :gal, ["gal", "gal.", "gallon", "gallons"]
-    set_unit_variations :oz, ["oz", "oz.", "ounce", "ounces"]
+    set_unit_variations :oz, ["oz", "oz.", "ozs", "ozs.", "ounce", "ounces"]
     set_unit_variations :pint, ["pt", "pt.", "pint", "pints"]
-    set_unit_variations :pound, ["lb", "lb.", "pound", "pounds"]
+    set_unit_variations :pound, ["lb", "lb.", "lbs", "lbs.", "pound", "pounds"]
     set_unit_variations :quart, ["qt", "qt.", "qts", "qts.", "quart", "quarts"]
     set_unit_variations :tbs, ["tbsp.", "tbsp", "tbs.", "tbs", "tb", "tb.", "T", "T.", "tablespoon", "tablespoons", "table spoon", "table spoons"]
     set_unit_variations :tsp, ["t", "t.", "ts", "ts.", "tsp", "tsp.", "teaspoon", "tea spoon", "teaspoons", "tea spoons"]
@@ -79,6 +79,9 @@ class IngreedyParser
     set_unit_variations :bunch, ["bunch", "a bunch"]
     set_unit_variations :stick, ["stick", "a stick"]
     set_unit_variations :clove, ["clove", "cloves"]
+    set_unit_variations :can, ["can", "cans"]
+    set_unit_variations :package, ["package", "packages"]
+    set_unit_variations :bag, ["bag", "bags"]
   end
 
   def parse_unit
