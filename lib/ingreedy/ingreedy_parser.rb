@@ -82,6 +82,9 @@ class IngreedyParser
     set_unit_variations :can, ["can", "cans"]
     set_unit_variations :package, ["package", "packages"]
     set_unit_variations :bag, ["bag", "bags"]
+    set_unit_variations :capful, ["capful", "capfuls"]
+    set_unit_variations :cube, ["cube", "cubes"]
+    set_unit_variations :jar, ["jar", "jars"]
   end
 
   def parse_unit
