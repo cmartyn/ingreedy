@@ -65,10 +65,11 @@ class IngreedyParser
     set_unit_variations :qt, ["qt", "qt.", "qts", "qts.", "quart", "quarts"]
     set_unit_variations :tbs, ["tbsp.", "tbsp", "tbs.", "tbs", "tb", "tb.", "T", "T.", "tablespoon", "tablespoons", "table spoon", "table spoons"]
     set_unit_variations :tsp, ["t", "t.", "ts", "ts.", "tsp", "tsp.", "teaspoon", "tea spoon", "teaspoons", "tea spoons"]
+    set_unit_variations :in, ["inch", "inches"]
     # metric units
-    set_unit_variations :gram, ["g", "g.", "gr", "gr.", "gram", "grams"]
+    set_unit_variations :g, ["g", "g.", "gr", "gr.", "gram", "grams"]
     set_unit_variations :kg, ["kg", "kg.", "kilogram", "kilograms"]
-    set_unit_variations :liter, ["l", "l.", "liter", "liters"]
+    set_unit_variations :l, ["l", "l.", "liter", "liters"]
     set_unit_variations :mg, ["mg", "mg.", "milligram", "milligrams"]
     set_unit_variations :ml, ["ml", "ml.", "milliliter", "milliliters"]
     # non-specific units
@@ -86,6 +87,9 @@ class IngreedyParser
     set_unit_variations :cube, ["cube", "cubes"]
     set_unit_variations :jar, ["jar", "jars"]
     set_unit_variations :container, ["container", "containers"]
+    
+    set_unit_variations :egg, ["egg", "eggs"]
+    set_unit_variations :pinch, ["pinch", "pinches"]
   end
 
   def parse_unit
