@@ -69,9 +69,9 @@ class IngreedyParser
     # metric units
     set_unit_variations :g, ["g", "g.", "gr", "gr.", "gram", "grams"]
     set_unit_variations :kg, ["kg", "kg.", "kilogram", "kilograms"]
-    set_unit_variations :l, ["l", "l.", "liter", "liters"]
+    set_unit_variations :L, ["l", "l.", "liter", "liters"]
     set_unit_variations :mg, ["mg", "mg.", "milligram", "milligrams"]
-    set_unit_variations :ml, ["ml", "ml.", "milliliter", "milliliters"]
+    set_unit_variations :mL, ["ml", "ml.", "milliliter", "milliliters"]
     # non-specific units
     set_unit_variations :dash, ["dash", "a dash"]
     set_unit_variations :pinch, ["pinch", "a pinch"]
