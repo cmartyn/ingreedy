@@ -88,7 +88,6 @@ class IngreedyParser
     set_unit_variations :jar, ["jar", "jars"]
     set_unit_variations :container, ["container", "containers"]
     
-    set_unit_variations :egg, ["egg", "eggs"]
     set_unit_variations :pinch, ["pinch", "pinches"]
   end
 
