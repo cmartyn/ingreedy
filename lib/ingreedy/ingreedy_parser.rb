@@ -87,6 +87,7 @@ class IngreedyParser
     set_unit_variations :cube, ["cube", "cubes"]
     set_unit_variations :jar, ["jar", "jars"]
     set_unit_variations :container, ["container", "containers"]
+    set_unit_variations :box, ["box", "boxes"]
     
     set_unit_variations :pinch, ["pinch", "pinches"]
   end
